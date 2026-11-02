@@ -58,8 +58,11 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2
   border-radius: 8px; background: rgba(15, 27, 80, .07); color: var(--ink); font-size: .78rem;
 }
 .tag--glass { background: rgba(255, 255, 255, .14); color: var(--white); }
-.tag--link { transition: background-color .25s, color .25s; }
-.tag--link:hover { background: var(--teal); color: var(--navy); }
+/* a tag that is a real link: reads as a button */
+.tag--link { gap: 12px; padding: 6px 6px 6px 22px; border-radius: var(--pill); background: var(--teal); color: var(--navy); font-family: var(--font-nav); font-size: .95rem; font-weight: 600; box-shadow: 0 14px 28px -14px rgba(18, 183, 177, .8); transition: background-color .25s, color .25s, transform .25s var(--ease); }
+.tag-go { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--white); color: var(--navy); font-size: .9rem; transition: transform .25s var(--ease); }
+.tag--link:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
+.tag--link:hover .tag-go { transform: rotate(45deg); }
 h3.tag { letter-spacing: normal; line-height: 1.55; } /* tags used as headings keep the tag look */
 .h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); color: var(--ink); }
 .lead { color: var(--muted); max-width: 460px; font-size: .95rem; }
