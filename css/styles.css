@@ -58,6 +58,8 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2
   border-radius: 8px; background: rgba(15, 27, 80, .07); color: var(--ink); font-size: .78rem;
 }
 .tag--glass { background: rgba(255, 255, 255, .14); color: var(--white); }
+.tag--link { transition: background-color .25s, color .25s; }
+.tag--link:hover { background: var(--teal); color: var(--navy); }
 h3.tag { letter-spacing: normal; line-height: 1.55; } /* tags used as headings keep the tag look */
 .h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); color: var(--ink); }
 .lead { color: var(--muted); max-width: 460px; font-size: .95rem; }
@@ -191,8 +193,8 @@ h3.tag { letter-spacing: normal; line-height: 1.55; } /* tags used as headings k
 @keyframes hfZoom { from { transform: scale(1.2); } }
 .hf-frame {
   position: absolute; left: 50%; top: var(--cy); width: var(--ww); height: var(--wh); translate: -50% -50%;
-  border-radius: 26px; border: 1px solid rgba(255, 255, 255, .55);
-  box-shadow: 0 30px 60px -20px rgba(6, 11, 38, .55), inset 0 0 0 1px rgba(255, 255, 255, .08);
+  border-radius: 26px;
+  box-shadow: 0 30px 60px -20px rgba(6, 11, 38, .55);
   pointer-events: none; animation: hfFade 1s ease .9s both;
 }
 
