@@ -392,7 +392,7 @@ h3.tag { letter-spacing: normal; line-height: 1.55; } /* tags used as headings k
 }
 
 /* =========================================================
-   OUR DOCTORS (home): b&w portraits over teal blobs
+   OUR DOCTORS (home): profile icons over teal blobs
    ========================================================= */
 .team { padding-top: clamp(40px, 5vw, 72px); overflow-x: clip; }
 .team-head { margin-bottom: clamp(36px, 4.5vw, 56px); }
@@ -409,6 +409,15 @@ h3.tag { letter-spacing: normal; line-height: 1.55; } /* tags used as headings k
   border-radius: 58% 42% 63% 37% / 45% 55% 45% 55%; transform: rotate(-12deg); transition: transform .8s var(--ease), border-radius .8s var(--ease); }
 .doc-photo--2 .doc-blob { inset: -10% -12% -4% -6%; border-radius: 42% 58% 38% 62% / 55% 40% 60% 45%; transform: rotate(18deg); }
 .doc-photo--3 .doc-blob { inset: -4% -6% -8% -14%; border-radius: 63% 37% 54% 46% / 38% 52% 48% 62%; transform: rotate(-30deg); }
+.doc-photo--4 .doc-blob { inset: -8% -14% -2% -8%; border-radius: 48% 52% 60% 40% / 40% 58% 42% 60%; transform: rotate(24deg); }
+.doc-photo--5 .doc-blob { inset: -2% -10% -10% -10%; border-radius: 60% 40% 45% 55% / 52% 44% 56% 48%; transform: rotate(-18deg); }
+.doc-photo--6 .doc-blob { inset: -10% -8% -4% -12%; border-radius: 40% 60% 58% 42% / 46% 60% 40% 54%; transform: rotate(36deg); }
+.doc-profile-icon { position: relative; z-index: 1; display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%;
+  background: radial-gradient(120% 120% at 30% 20%, #ffffff 0%, #eef2fa 60%, #dfe6f5 100%); color: var(--navy);
+  box-shadow: 0 18px 40px -24px rgba(15, 27, 80, .55); transition: transform .6s var(--ease); }
+.doc-profile-icon svg { width: 40%; height: 40%; stroke-width: 1.5; }
+.doc:hover .doc-profile-icon { transform: scale(1.03); }
+.doc-deg { margin-left: 4px; font-size: .78rem; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
 .doc:hover .doc-photo img { filter: grayscale(0) contrast(1); transform: scale(1.02); }
 .doc:hover .doc-blob { transform: rotate(8deg) scale(1.04); border-radius: 45% 55% 40% 60% / 60% 40% 60% 40%; }
 .doc-dept { margin-bottom: 6px; font-size: .8rem; font-weight: 400; letter-spacing: 0; line-height: 1.4; color: var(--teal-ink); }
@@ -416,8 +425,9 @@ h3.tag { letter-spacing: normal; line-height: 1.55; } /* tags used as headings k
 
 @media (max-width: 760px) {
   .doc-grid { grid-template-columns: 1fr 1fr; }
-  .doc:last-child { grid-column: 1 / -1; }
   .doc-photo { width: clamp(130px, 38vw, 170px); }
+  .doc-name { font-size: .95rem; line-height: 1.35; }
+  .doc-deg { display: block; margin: 2px 0 0; }
 }
 
 /* =========================================================
